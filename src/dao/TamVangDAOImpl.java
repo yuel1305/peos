@@ -13,10 +13,10 @@ public class TamVangDAOImpl implements TamVangDAO {
             String sql = "INSERT INTO TamVang (maTamVang, hoTen, cmnd, maHoKhau, quanHeChuHo, ngayDangKy, thoiGianTamVang, lyDo) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
 
             try (PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
-                preparedStatement.setString(1, tamVang.getMaTamVang());
+                preparedStatement.setLong(1, tamVang.getMaTamVang());
                 preparedStatement.setString(2, tamVang.getHoTen());
-                preparedStatement.setString(3, tamVang.getCmnd());
-                preparedStatement.setString(4, tamVang.getMaHoKhau());
+                preparedStatement.setLong(3, tamVang.getCmnd());
+                preparedStatement.setLong(4, tamVang.getMaHoKhau());
                 preparedStatement.setString(5, tamVang.getQuanHeChuHo());
                 preparedStatement.setDate(6, new java.sql.Date(tamVang.getNgayDangKy().getTime()));
                 preparedStatement.setDate(7, new java.sql.Date(tamVang.getThoiGianTamVang().getTime()));
@@ -60,10 +60,10 @@ public class TamVangDAOImpl implements TamVangDAO {
 
                 while (resultSet.next()) {
                     TamVang tamVang = new TamVang();
-                    tamVang.setMaTamVang(resultSet.getString("maTamVang"));
+                    tamVang.setMaTamVang(resultSet.getInt("maTamVang"));
                     tamVang.setHoTen(resultSet.getString("hoTen"));
-                    tamVang.setCmnd(resultSet.getString("cmnd"));
-                    tamVang.setMaHoKhau(resultSet.getString("maHoKhau"));
+                    tamVang.setCmnd(resultSet.getInt("cmnd"));
+                    tamVang.setMaHoKhau(resultSet.getInt("maHoKhau"));
                     tamVang.setQuanHeChuHo(resultSet.getString("quanHeChuHo"));
                     tamVang.setNgayDangKy(resultSet.getDate("ngayDangKy"));
                     tamVang.setThoiGianTamVang(resultSet.getDate("thoiGianTamVang"));
@@ -94,10 +94,10 @@ public class TamVangDAOImpl implements TamVangDAO {
                 try (ResultSet resultSet = preparedStatement.executeQuery()) {
                     while (resultSet.next()) {
                         TamVang tamVang = new TamVang();
-                        tamVang.setMaTamVang(resultSet.getString("maTamVang"));
+                        tamVang.setMaTamVang(resultSet.getInt("maTamVang"));
                         tamVang.setHoTen(resultSet.getString("hoTen"));
-                        tamVang.setCmnd(resultSet.getString("cmnd"));
-                        tamVang.setMaHoKhau(resultSet.getString("maHoKhau"));
+                        tamVang.setCmnd(resultSet.getInt("cmnd"));
+                        tamVang.setMaHoKhau(resultSet.getInt("maHoKhau"));
                         tamVang.setQuanHeChuHo(resultSet.getString("quanHeChuHo"));
                         tamVang.setNgayDangKy(resultSet.getDate("ngayDangKy"));
                         tamVang.setThoiGianTamVang(resultSet.getDate("thoiGianTamVang"));

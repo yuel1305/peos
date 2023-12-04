@@ -3,19 +3,19 @@ package model;
 import java.util.Date;
 
 public class TamTru {
-    private String maTamTru;
+    private int maTamTru;
     private String hoTen;
-    private String cmnd;
-    private String maHoKhau;
+    private int cmnd;
+    private int maHoKhau;
     private String quanHeChuHo;
-    private String ngayDangKy;
-    private String thoiGianTamTru;
+    private Date ngayDangKy;
+    private Date thoiGianTamTru;
     private String diaChiTruocChuyenDen;
 	
-    public String getMaTamTru() {
+    public int getMaTamTru() {
 		return maTamTru;
 	}
-	public void setMaTamTru(String maTamTru) {
+	public void setMaTamTru(int maTamTru) {
 		this.maTamTru = maTamTru;
 	}
 	public String getHoTen() {
@@ -24,16 +24,16 @@ public class TamTru {
 	public void setHoTen(String hoTen) {
 		this.hoTen = hoTen;
 	}
-	public String getCmnd() {
+	public int getCmnd() {
 		return cmnd;
 	}
-	public void setCmnd(String cmnd) {
+	public void setCmnd(int cmnd) {
 		this.cmnd = cmnd;
 	}
-	public String getMaHoKhau() {
+	public int getMaHoKhau() {
 		return maHoKhau;
 	}
-	public void setMaHoKhau(String maHoKhau) {
+	public void setMaHoKhau(int maHoKhau) {
 		this.maHoKhau = maHoKhau;
 	}
 	public String getQuanHeChuHo() {
@@ -42,16 +42,16 @@ public class TamTru {
 	public void setQuanHeChuHo(String quanHeChuHo) {
 		this.quanHeChuHo = quanHeChuHo;
 	}
-	public String getNgayDangKy() {
+	public Date getNgayDangKy() {
 		return ngayDangKy;
 	}
-	public void setNgayDangKy(String ngayDangKy) {
+	public void setNgayDangKy(Date ngayDangKy) {
 		this.ngayDangKy = ngayDangKy;
 	}
-	public String getThoiGianTamTru() {
+	public Date getThoiGianTamTru() {
 		return thoiGianTamTru;
 	}
-	public void setThoiGianTamTru(String thoiGianTamTru) {
+	public void setThoiGianTamTru(Date thoiGianTamTru) {
 		this.thoiGianTamTru = thoiGianTamTru;
 	}
 	public String getDiaChiTruocChuyenDen() {
@@ -60,8 +60,8 @@ public class TamTru {
 	public void setDiaChiTruocChuyenDen(String diaChiTruocChuyenDen) {
 		this.diaChiTruocChuyenDen = diaChiTruocChuyenDen;
 	}
-	public TamTru(String maTamTru, String hoTen, String cmnd, String maHoKhau, String quanHeChuHo, String ngayDangKy,
-			String thoiGianTamTru, String diaChiTruocChuyenDen) {
+	public TamTru(int maTamTru, String hoTen, int cmnd, int maHoKhau, String quanHeChuHo, Date ngayDangKy,
+			Date thoiGianTamTru, String diaChiTruocChuyenDen) {
 		super();
 		this.maTamTru = maTamTru;
 		this.hoTen = hoTen;

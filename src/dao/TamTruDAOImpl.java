@@ -15,13 +15,13 @@ public class TamTruDAOImpl implements TamTruDAO {
             String sql = "INSERT INTO TamTru (maTamTru, hoTen, cmnd, maHoKhau, quanHeChuHo, ngayDangKy, thoiGianTamTru, diaChiTruocChuyenDen) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
 
             try (PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
-                preparedStatement.setString(1, tamTru.getMaTamTru());
+                preparedStatement.setInt(1, tamTru.getMaTamTru());
                 preparedStatement.setString(2, tamTru.getHoTen());
-                preparedStatement.setString(3, tamTru.getCmnd());
-                preparedStatement.setString(4, tamTru.getMaHoKhau());
+                preparedStatement.setInt(3, tamTru.getCmnd());
+                preparedStatement.setInt(4, tamTru.getMaHoKhau());
                 preparedStatement.setString(5, tamTru.getQuanHeChuHo());
-                preparedStatement.setString(6, tamTru.getNgayDangKy() );
-                preparedStatement.setString(7, tamTru.getThoiGianTamTru());
+                preparedStatement.setDate(6, new java.sql.Date(tamTru.getNgayDangKy().getTime()) );
+                preparedStatement.setDate(7, new java.sql.Date(tamTru.getNgayDangKy().getTime()));
                 preparedStatement.setString(8, tamTru.getDiaChiTruocChuyenDen());
 
                 int rowsAffected = preparedStatement.executeUpdate();
@@ -62,13 +62,13 @@ public class TamTruDAOImpl implements TamTruDAO {
 
                 while (resultSet.next()) {
                     TamTru tamTru = new TamTru();
-                    tamTru.setMaTamTru(resultSet.getString("maTamTru"));
+                    tamTru.setMaTamTru(resultSet.getInt("maTamTru"));
                     tamTru.setHoTen(resultSet.getString("hoTen"));
-                    tamTru.setCmnd(resultSet.getString("cmnd"));
-                    tamTru.setMaHoKhau(resultSet.getString("maHoKhau"));
+                    tamTru.setCmnd(resultSet.getInt("cmnd"));
+                    tamTru.setMaHoKhau(resultSet.getInt("maHoKhau"));
                     tamTru.setQuanHeChuHo(resultSet.getString("quanHeChuHo"));
-                    tamTru.setNgayDangKy(resultSet.getString("ngayDangKy"));
-                    tamTru.setThoiGianTamTru(resultSet.getString("thoiGianTamTru"));
+                    tamTru.setNgayDangKy(resultSet.getDate("ngayDangKy"));
+                    tamTru.setThoiGianTamTru(resultSet.getDate("thoiGianTamTru"));
                     tamTru.setDiaChiTruocChuyenDen(resultSet.getString("diaChiTruocChuyenDen"));
 
                     danhSachTamTru.add(tamTru);
@@ -96,13 +96,13 @@ public class TamTruDAOImpl implements TamTruDAO {
                 try (ResultSet resultSet = preparedStatement.executeQuery()) {
                     while (resultSet.next()) {
                         TamTru tamTru = new TamTru();
-                        tamTru.setMaTamTru(resultSet.getString("maTamTru"));
+                        tamTru.setMaTamTru(resultSet.getInt("maTamTru"));
                         tamTru.setHoTen(resultSet.getString("hoTen"));
-                        tamTru.setCmnd(resultSet.getString("cmnd"));
-                        tamTru.setMaHoKhau(resultSet.getString("maHoKhau"));
+                        tamTru.setCmnd(resultSet.getInt("cmnd"));
+                        tamTru.setMaHoKhau(resultSet.getInt("maHoKhau"));
                         tamTru.setQuanHeChuHo(resultSet.getString("quanHeChuHo"));
-                        tamTru.setNgayDangKy(resultSet.getString("ngayDangKy"));
-                        tamTru.setThoiGianTamTru(resultSet.getString("thoiGianTamTru"));
+                        tamTru.setNgayDangKy(resultSet.getDate("ngayDangKy"));
+                        tamTru.setThoiGianTamTru(resultSet.getDate("thoiGianTamTru"));
                         tamTru.setDiaChiTruocChuyenDen(resultSet.getString("diaChiTruocChuyenDen"));
 
                         ketQua.add(tamTru);

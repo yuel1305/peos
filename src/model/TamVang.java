@@ -3,19 +3,19 @@ package model;
 import java.util.Date;
 
 public class TamVang {
-    private String maTamVang;
+    private int maTamVang;
     private String hoTen;
-    private String cmnd;
-    private String maHoKhau;
+    private int cmnd;
+    private int maHoKhau;
     private String quanHeChuHo;
     private Date ngayDangKy;
     private Date thoiGianTamVang;
     private String lyDo;
     
-	public String getMaTamVang() {
+	public int getMaTamVang() {
 		return maTamVang;
 	}
-	public void setMaTamVang(String maTamVang) {
+	public void setMaTamVang(int maTamVang) {
 		this.maTamVang = maTamVang;
 	}
 	public String getHoTen() {
@@ -24,16 +24,16 @@ public class TamVang {
 	public void setHoTen(String hoTen) {
 		this.hoTen = hoTen;
 	}
-	public String getCmnd() {
+	public int getCmnd() {
 		return cmnd;
 	}
-	public void setCmnd(String cmnd) {
+	public void setCmnd(int cmnd) {
 		this.cmnd = cmnd;
 	}
-	public String getMaHoKhau() {
+	public int getMaHoKhau() {
 		return maHoKhau;
 	}
-	public void setMaHoKhau(String maHoKhau) {
+	public void setMaHoKhau(int maHoKhau) {
 		this.maHoKhau = maHoKhau;
 	}
 	public String getQuanHeChuHo() {
@@ -60,7 +60,7 @@ public class TamVang {
 	public void setLyDo(String lyDo) {
 		this.lyDo = lyDo;
 	}
-	public TamVang(String maTamVang, String hoTen, String cmnd, String maHoKhau, String quanHeChuHo, Date ngayDangKy,
+	public TamVang(int maTamVang, String hoTen, int cmnd, int maHoKhau, String quanHeChuHo, Date ngayDangKy,
 			Date thoiGianTamVang, String lyDo) {
 		super();
 		this.maTamVang = maTamVang;

@@ -11,28 +11,28 @@ public class TestTamVangDAO {
         TamVangDAOImpl tamVangDAO = new TamVangDAOImpl();
 
 //        // Kiểm tra đăng ký tạm vắng
-//        TamVang tamVangDangKy = new TamVang();
-//        tamVangDangKy.setMaTamVang("TV009");
-//        tamVangDangKy.setHoTen("LAN ANH");
-//        tamVangDangKy.setCmnd("123456789");
-//        tamVangDangKy.setMaHoKhau("HK001");
-//        tamVangDangKy.setQuanHeChuHo("Con");
-//        tamVangDangKy.setNgayDangKy(new java.util.Date());
-//        tamVangDangKy.setThoiGianTamVang(new java.util.Date());
-//        tamVangDangKy.setLyDo("Đi kím ngiu");
-//
-//        boolean ketQuaDangKy = tamVangDAO.dangKyTamVang(tamVangDangKy);
-//        System.out.println("Đăng ký tạm vắng: " + (ketQuaDangKy ? "Thành công" : "Thất bại"));
+/*        TamVang tamVangDangKy = new TamVang();
+        tamVangDangKy.setMaTamVang(12345678);
+        tamVangDangKy.setHoTen("LAN ANH");
+        tamVangDangKy.setCmnd(123456789);
+        tamVangDangKy.setMaHoKhau(12345);
+        tamVangDangKy.setQuanHeChuHo("Con");
+        tamVangDangKy.setNgayDangKy(new java.util.Date());
+        tamVangDangKy.setThoiGianTamVang(new java.util.Date());
+        tamVangDangKy.setLyDo("Đi kím ngiu");
 
+        boolean ketQuaDangKy = tamVangDAO.dangKyTamVang(tamVangDangKy);
+        System.out.println("Đăng ký tạm vắng: " + (ketQuaDangKy ? "Thành công" : "Thất bại"));
+*/
         // Kiểm tra xem tạm vắng đã được đăng ký thành công chưa
-//        List<TamVang> danhSachTamVang = tamVangDAO.xemDanhSachTamVang();
-//        System.out.println("Danh sách tạm vắng:");
-//        for (TamVang tv : danhSachTamVang) {
-//            System.out.println(tv.getMaTamVang() + " - " + tv.getHoTen() + " - " + tv.getLyDo());
-//        }
+        List<TamVang> danhSachTamVang = tamVangDAO.xemDanhSachTamVang();
+        System.out.println("Danh sách tạm vắng:");
+        for (TamVang tv : danhSachTamVang) {
+            System.out.println(tv.getMaTamVang() + " - " + tv.getHoTen() + " - " + tv.getLyDo());
+        }
 
         // Kiểm tra hủy tạm vắng
-//        boolean ketQuaHuy = tamVangDAO.huyTamVang("TV001");
+//        boolean ketQuaHuy = tamVangDAO.huyTamVang("12345");
 //        System.out.println("Hủy tạm vắng: " + (ketQuaHuy ? "Thành công" : "Thất bại"));
 
         // Kiểm tra tìm kiếm tạm vắng

@@ -12,10 +12,10 @@ public class TestTamTruDAO {
 
         // Kiểm tra đăng ký tạm trú
 //        TamTru tamTruDangKy = new TamTru();
-//        tamTruDangKy.setMaTamTru("TT");
+//        tamTruDangKy.setMaTamTru("12345");
 //        tamTruDangKy.setHoTen("lanhhh");
 //        tamTruDangKy.setCmnd("111111");
-//        tamTruDangKy.setMaHoKhau("HK1");
+//        tamTruDangKy.setMaHoKhau("768");
 //        tamTruDangKy.setQuanHeChuHo("con");
 //        tamTruDangKy.setNgayDangKy(new java.util.Date());
 //        tamTruDangKy.setThoiGianTamTru(new java.util.Date());
@@ -32,7 +32,7 @@ public class TestTamTruDAO {
 //        }
 
         // Kiểm tra hủy tạm trú
-//        boolean ketQuaHuy = tamTruDAO.huyTamTru("TT001");
+//        boolean ketQuaHuy = tamTruDAO.huyTamTru("12345");
 //        System.out.println("Hủy tạm trú: " + (ketQuaHuy ? "Thành công" : "Thất bại"));
 
         // Kiểm tra tìm kiếm tạm trú
